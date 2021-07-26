@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's the Fare Based on My Age?</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>Check the fare.  Age is:</h1>
+        <select v-model="age">
+            <option disabled value="">Age</option>
+            <option>Less than 6</option>
+            <option>7~12</option>
+            <option>13~20</option>
+            <option>20 and up</option>
+        </select>
+        <br />
+        <p v-if="fare >= 0">${{ fare }}</p>
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+<script src="./app.js"></script>
+</html>
